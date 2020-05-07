@@ -36,6 +36,6 @@ After retraining on our own task, real-time inference can be operated by running
 # **--- 3. Results of the RtGD model ---**  
 The result of the RtGD model is illustrated in the following figure. 
 
-<img src="./images/Result.png" width="450" height="300">
+
 
 # **--- 4. Future work and reflections ---**  
