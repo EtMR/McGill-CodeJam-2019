@@ -21,7 +21,18 @@ The goal for this project is to develop a RtGD system **having minimum effect on
 ![(5) peace](/images/peace.jpg)
 
 --- 2. Functions for each script ---
+In this section, I will introduce the function for each scripts and zip file based on my experimental flow. A illustration for the experimental flow is presented below:
 
+>>>  pretrain VGG model (/models.zip/VGG_cross_validated.h5)
+-->  record images for downstream task (1_Record_Image.py) (NewTraining20191216.zip)
+-->  retrain the model (2_Retrain model.py) (retrained_20200506.h5)
+-->  operate the RtGD system (3_RtGD.py)
+
+The pretrained and retrained models are stored in the model.zip file. If you are interested to record new images for your downstream task, the script provided in (1_Record_Image.py) can serve well for this perpose. The recording script includes a motion detection algorithm which only catch up moving parts and omit environmental noise (ex: lights from the window or lamp). An example for the recorded images, with 20 images for each classes, are stored in NewTraining20191216.zip. These images are then applied to retrain our model using script (2_Retrain model.py). Due to the time limitation in CodeJam competition, we frozen the convolution layer of the VGG model and use the recorded images to only retrain the dense layer which have 3252997 trainable parameters.
+
+After retraining on our own task, real-time inference can be operated by running the script (3_RtGD.py); the same motion detection algorithm is also used here. Due to the retraining process, our model is able to recognize different hand gestures with minimum interference from the environmental light noise. A testing accuracy of 85% is achieved by using the recorded dataset.
 
 --- 3. Results of the RtGD model ---
+The result of running the RtGD model is illustrated in the following figure
+
 --- 4. Future work and reflections ---
