@@ -2,16 +2,12 @@ import cv2
 import numpy as np
 from keras.models import load_model
 
-# ----- Parameters for this script -----
-
-#model_path = 
-
 # ----- General Settings -----
 prediction = ''
 action = ''
 score = 0
 gesture_names = {0: 'Fist', 1: 'L', 2: 'Okay', 3: 'Palm', 4: 'Peace'}
-model = load_model('models/VGG_cross_validated_retrained.h5')
+model = load_model('models/retrained_20200506.h5')
 
 def predict_vgg(image):
     image = np.array(image, dtype='float32')
