@@ -8,7 +8,7 @@ This repository will be structured as follow:
     1. Our goal for the project.  
     2. Functions for each script.  
     3. Results of the RtGD model.  
-    4. Future work and reflections.**
+    4. Future work and reflections.
 </pre>
 
 Note, the code provided here is just the computer vision part of the CodeJam project. For the detailed project description and source code, please refer to the devpost page provided above.
@@ -23,10 +23,10 @@ The goal for this project is to develop a RtGD system **having minimum effect on
 In this section, I will introduce the function for each scripts and zip file based on my experimental flow. A illustration for the experimental flow is presented below:
 
 <pre>
--->  pretrain VGG model                 (/models.zip/VGG_cross_validated.h5)  
--->  record images for downstream task  (1_Record_Image.py) (NewTraining20191216.zip)  
--->  retrain the model                  (2_Retrain model.py) (retrained_20200506.h5)  
--->  operate the RtGD system            (3_RtGD.py)
+    1.  pretrain VGG model                 (/models.zip/VGG_cross_validated.h5)  
+    2.  record images for downstream task  (1_Record_Image.py) (NewTraining20191216.zip)  
+    3.  retrain the model                  (2_Retrain model.py) (retrained_20200506.h5)  
+    4.  operate the RtGD system            (3_RtGD.py)
 </pre>
 
 The pretrained and retrained models are stored in the model.zip file. If you are interested to record new images for your downstream task, the script provided in (1_Record_Image.py) can serve well for this perpose. The recording script includes a motion detection algorithm which only catch up moving parts and omit environmental noise (ex: lights from the window or lamp). An example for the recorded images, with 20 images for each classes, are stored in NewTraining20191216.zip. These images are then applied to retrain our model using script (2_Retrain model.py). Due to the time limitation in CodeJam competition, we frozen the convolution layer of the VGG model and use the recorded images to only retrain the dense layer which have 3252997 trainable parameters.
