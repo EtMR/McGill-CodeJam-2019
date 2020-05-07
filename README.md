@@ -5,13 +5,23 @@ This repository includes the source code for our work on a Real-time Gesture Det
 
 This repository will be structured as follow:
     1. Our goal for the project.
-    2. The function for each scripts.
-    3. The result of the RtGD model.
+    2. Functions for each script.
+    3. Results of the RtGD model.
     4. Future work and reflections.
 
 Note, the code provided here is just the computer vision part of the CodeJam project. For the detailed project description and source code, please refer to the devpost page provided above.
 
 --- 1. Our goal for the project ---
-The goal for this project is to develop a RtGD system having minimum effect on environmental noise. When compared to the work done by Brenner Heintz, our system is targeted to function properly outside of a dark room. This is tackled by the compibation of a motion detection algorithm (OpenCV) + model retraining on noisy data in our approach. We followed the pretrained model from Brenner's repo and targeted the recognition of the same five gestures, peace, L, okey, fist, and palm, in this project. Examples for the retraining gesture data are shown in the figure below: 
+The goal for this project is to develop a RtGD system **having minimum effect on environmental noise**. When compared to the work done by Brenner Heintz, our system is targeted to function properly outside of a dark room. This is tackled by the compibation of a motion detection algorithm (OpenCV) + model retraining on noisy data in our approach. We followed the pretrained model from Brenner's repo and targeted the recognition of the same five gestures, fist, L, okay, palm, and peace, in this project. Examples for the retraining gesture data are shown in the figure below: 
 
-![fist](/McGill-CodeJam-2019/NewTraining20191216/fist_5.jpg)
+![(1) fist](/images/fist.jpg)
+![(2) L](/images/L.jpg)
+![(3) okay](/images/okay.jpg)
+![(4) palm](/images/palm.jpg)
+![(5) peace](/images/peace.jpg)
+
+--- 2. Functions for each script ---
+
+
+--- 3. Results of the RtGD model ---
+--- 4. Future work and reflections ---
