@@ -1,7 +1,6 @@
 # McGill-CodeJam-2019
 
-# Introduction  
-This repository includes the source code for our work on a Real-time Gesture Detection system (RtGD). The work is developed with the help of my teammates (Kaiwen Xu, Tom Sarry, and Elsa Emilien) during the McGill CodeJam 2019 event (https://devpost.com/software/mr-bean) which wins the second-place award in the Optional Theme - Internet of Things. Instead of the whole CodeJam work, only the computer vision part of this project is demonstrated here. I would also want to acknowledge Brenner Heintz (https://github.com/athena15/project_kojak) for his pre-trained hand-gesture model and the inspiration on this project.
+This repository includes the source code for our work on a Real-time Gesture Detection system (RtGD). The work is developed with the help of my teammates (Kaiwen Xu, Tom Sarry, and Elsa Emilien) during the McGill CodeJam 2019 event (https://devpost.com/software/mr-bean) which wins the second-place award in the Optional Theme - Internet of Things. I would also want to acknowledge Brenner Heintz (https://github.com/athena15/project_kojak) for his pre-trained hand-gesture model and the inspiration on this project.
 
 This repository will be structured as follow:
 <pre>
